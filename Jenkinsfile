@@ -6,5 +6,5 @@ node{
   def me =sh (script:'git whatchanged -n 1 --pretty=format: --name-only',returnStdout:true).trim().split('/')
   def pckg= me.length>1?me[1]:'.'
   currentBuild.displayName = pckg+currentBuild.displayName
-  sh 'git diff --dirstat=files HEAD^ HEAD'
+  sh 'git diff HEAD^ HEAD --dirstat'
 }
