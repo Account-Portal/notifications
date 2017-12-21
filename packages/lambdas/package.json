@@ -1,0 +1,12 @@
+{
+  "name": "sample-domain",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "$(cd ..; npm bin)/mocha",
+    "flow": "$(cd ..; npm bin)/flow"
+  },
+  "author": "janus",
+  "license": "MIT"
+}
