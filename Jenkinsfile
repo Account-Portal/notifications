@@ -9,6 +9,7 @@ node(execagent){
   //Steps to be able to call pipeline methods
   concurrency: 1
   checkout scm
+  print something
   dir('pipelines') 
   {
         git url: 'https://github.com/Account-Portal/pipelines.git'
