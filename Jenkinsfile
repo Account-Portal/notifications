@@ -1,6 +1,7 @@
 //load the shared pipeline library
 //define all environment variables
 //define variables for execution stages
+execagent='master'
 PIPELINE_URL='https://github.com/Account-Portal/pipelines.git'
 PIPELINE_FILE='./pipelines/common.groovy'
 
