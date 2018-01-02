@@ -1,4 +1,10 @@
-node{
+//load the shared pipeline library
+//define all environment variables
+//define variables for execution stages
+def node="master"
+
+node('${node}'){
+  //Steps to be able to call pipeline methods
   concurrency: 1
   checkout scm
   dir('pipelines') 
@@ -6,6 +12,11 @@ node{
         git url: 'https://github.com/Account-Portal/pipelines.git'
   }
   def pipeline = load './pipelines/common.groovy'
-  pipeline.prep()
-  input message: 'Do you want to do anything', ok: 'Yoyo'
+  
+  
+  
+  //Setup the pipeline and execute all the stages
+  pipeline.setUp()
+  pipeline.start()
+  pipeline.tearDown()
 }
