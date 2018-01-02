@@ -2,12 +2,13 @@
 //define all environment variables
 //define variables for execution stages
 
-environment{
+
+node(env.execagent){
+  environment{
   execagent="master"
   PIPELINE_URL='https://github.com/Account-Portal/pipelines.git'
   PIPELINE_FILE='./pipelines/common.groovy'
-}
-node(env.execagent){
+  }
   //Steps to be able to call pipeline methods
   concurrency: 1
   checkout scm
