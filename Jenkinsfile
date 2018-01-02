@@ -1,10 +1,10 @@
 //load the shared pipeline library
 //define all environment variables
 //define variables for execution stages
-def PIPELINE_URL='https://github.com/Account-Portal/pipelines.git'
-def PIPELINE_FILE='./pipelines/common.groovy'
+PIPELINE_URL='https://github.com/Account-Portal/pipelines.git'
+PIPELINE_FILE='./pipelines/common.groovy'
 
-node(env.execagent){
+node(execagent){
   
   //Steps to be able to call pipeline methods
   concurrency: 1
