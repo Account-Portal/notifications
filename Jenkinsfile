@@ -1,15 +1,15 @@
 //load the shared pipeline library
 //define all environment variables
 //define variables for execution stages
-def execagent="master"
+
 environment{
-  something='here'
+  execagent="master"
 }
-node(execagent){
+node(env.execagent){
   //Steps to be able to call pipeline methods
   concurrency: 1
   checkout scm
-  print env.something
+  
   dir('pipelines') 
   {
         git url: 'https://github.com/Account-Portal/pipelines.git'
