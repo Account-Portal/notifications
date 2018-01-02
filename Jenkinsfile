@@ -1,9 +1,9 @@
 //load the shared pipeline library
 //define all environment variables
 //define variables for execution stages
-def node="master"
+def agent="master"
 
-node('${node}'){
+node('${agent}'){
   //Steps to be able to call pipeline methods
   concurrency: 1
   checkout scm
