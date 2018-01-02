@@ -2,7 +2,9 @@
 //define all environment variables
 //define variables for execution stages
 def execagent="master"
-
+environment{
+  something='here'
+}
 node(execagent){
   //Steps to be able to call pipeline methods
   concurrency: 1
